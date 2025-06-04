@@ -30,6 +30,8 @@ height: 8%;
         background-color: #6C9A94;
       padding: 10px 20px;
       flex-wrap: wrap;
+           position: fixed;
+      width: 100%;
     }
 
     .navbar .logo {
