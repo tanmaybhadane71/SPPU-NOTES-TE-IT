@@ -1,101 +1,138 @@
-
 * {
-    margin: 0;
-    padding: ;
-    box-sizing: border-box;
-}
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
 
-/* Set a base font size and family */
-body {
-    font-family: Arial, sans-serif;
+    body {
+    
     font-size: 16px;
     line-height: 1.6;
     color: #f8f8f8;
-    background: linear-gradient(8deg,rgb(0, 0, 0),rgb(0, 0, 0),rgba(215, 21, 0, 0.9));
+   background: linear-gradient(to right,
+    
+    rgb(167, 166, 149),
+    rgb(216, 187, 163),
+    rgb(240, 156, 125),
+    rgb(204, 127, 110)
+    
+  );
+ 
 height: 8%;
  background-size: cover; 
-}
-
-/* Container class for centering content */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Basic styling for headings */
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1.5rem;
-    font-weight: bold;
-}
-
-/* Basic styling for paragraphs */
-p {
-    margin-bottom: 1rem;
-}
-
-/* Basic styling for links */
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: rgba(92, 92, 235, 0.491);
-   
-}
-
-/* Basic styling for buttons */
-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF;
-    color: #fff;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Basic styling for forms */
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 10px;
     }
-}
-.nav{
-   justify-content: center;
-   align-items: center;
-   justify-items: center;
-   justify-content: baseline;
-   background-color: #333;
-   width: 100%;
-   position: fixed;
 
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+        background-color: #6C9A94;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+      color: #5b5b5b95;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar ul li {
+      position: relative;
+    }
+
+    .navbar ul li a {
+      color: #fff;
+      padding: 10px 15px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .navbar ul li:hover {
+      background-color: #444;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #444;
+      top: 40px;
+      left: 0;
+      min-width: 150px;
+      z-index: 999;
+    }
+
+    .dropdown a {
+      padding: 10px;
+    }
+
+    .navbar ul li:hover .dropdown {
+      display: block;
+    }
+
+    /* Hamburger Menu */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 4px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      .navbar ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: #333;
+      }
+
+      .navbar ul.show {
+        display: flex;
+      }
+
+      .navbar ul li {
+        width: 100%;
+        text-align: left;
+      }
+
+      .dropdown {
+        position: static;
+      }
+    }
+    #login{
+      
+      background-color: rgb(167, 166, 149);
+       padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+     cursor: pointer;
+    }
+    #login:hover {
+  background-color: #111010b7; 
+  border: none;
 }
-.in{
-    text-decoration: none;
-    font-size: larger;
-    color: #ffffff;
-    font-weight: 600;
-    margin: 15px;
-}
-#grid1{
+    /*nerw code */
+    #grid1{
     display: grid;
     grid-template-columns: repeat(auto-fill , minmax( 200px , 1fr));
     grid-gap: 20px;
@@ -126,21 +163,33 @@ span{
     color: #000000;
 
 }
-#mycon h1{
-    font-size: 45px;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.875);
-    width: 555px;
-    }
-    #contact{
-        position: relative;
-        
-        width: 90%;
-       left: 10%;
-        color: aliceblue;
-        
-        display: flex;
-    }
-  .pad{
+.pad{
     padding-left: 10px;
    }
+ 
+/* Basic styling for paragraphs */
+p {
+    margin-bottom: 1rem;
+}
+
+/* Basic styling for links */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgba(92, 92, 235, 0.491);
+   
+}
+.footer {
+  background-color: rgb(117, 88, 93);
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+#year{
+    color: #fff;
+}
